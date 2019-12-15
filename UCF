@@ -1,0 +1,8 @@
+NET "led" LOC = "M5" ; #Signal name = LD0
+NET "s0" LOC = "E2";   #Signal name = SW6
+NET "s1" LOC = "N3";  #Signal name = SW7
+NET "D" LOC = "B4";   #Signal name = SW3
+NET "C" LOC = "K3";   #Signal name = SW2
+NET "B" LOC = "L3";   #Signal name = SW1
+NET "A" LOC = "P11";   #Signal name = SW0
+ NET "s0" CLOCK_DEDICATED_ROUTE = FALSE; 
