@@ -1,0 +1,30 @@
+`timescale 1ns / 1ps
+//S1	S0	Fonksiyon
+//0	0	A+B
+//0	1	C+D
+//1	0	B+D’
+//1	1	A’+C
+module Mux(A,B,C,D,s0,s1,led);
+input A,B,C,D,s1,s0;
+output led;
+reg led;
+always@(A or B or C or D or s1 or s0)
+begin
+if(s1==0  && s0==0) 
+begin
+led= A | B;
+end
+else if(s1==0  && s0==1)
+begin
+led= C | D;
+end
+else if(s1==1  && s0==0)
+begin
+led= B | ~D;
+end
+else if(s1==1  && s0==1)
+begin
+led= ~A | C;
+end
+end
+endmodule
